@@ -14,7 +14,7 @@
 	Utilisation des propriétés: border-radius, box-shadow, text-shadow, webfonts
 	Utilisation de transisitons et animations CSS3
 	
-<B>Simulation de la réception de messages et de leur affichage</B>
+<B>Simulation de la réception de messages et de leur affichage</B><br/>
 Vous ajouterez un bouton qui au lieu de soumettre le formulaire avec Ajax/Xhr2, ajoute le message dans la liste des messages, 
 sur la page. Vous préparez ainsi la partie qui recevra les messages. Idem: faites un truc joli, avec affichage des photos etc. 
 Les plus doués d'entre vous iront voir du côté du module flexbox de CSS3.

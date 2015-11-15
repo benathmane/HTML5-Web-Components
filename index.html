@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mon formulaire</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/>-->
+    <script src="script/geolocalisation.js"> </script>
+    <!--<script>
+        $(document).ready(function(){
+            $("#send").click(function(){
+                var titre = document.getElementById("titre").value;
+                var message = document.getElementById("message").value;
+                var images = document.getElementById('messages');
+                $("#listMsg").append("<b>Titre : </b>" + titre + "<br/><b>Message : </b>" + message + "<br/>" +
+                        "<b>Images : </b>" + images.innerHTML + "<br/><br/>");
+            });
+        });
+    </script>-->
+</head>
+<body onload="initialize()">
+<div id="contact">
+    <h1>Nouveau message</h1>
+    <form id="ContactForm">
+        <p>
+            <label>Titre : </label>
+            <input id="titre" name="titre" type="text" required/>
+        </p>
+        <p>
+            <label>Contenu : <br /> <span>300 characters allowed</span></label>
+            <textarea id="message" name="message" class="inplaceError" cols="6" rows="5" autocomplete="off" required></textarea>
+        </p>
+        <p>
+            <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+
+                <div id="upl">
+                        <label for="fileselect">Ajouter des images : </label>
+                        <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                        <div id="filedrag"><img id="upload-icon" src="images/Upload-Folder-Blue-icon.png" alt="ou glisser ici"/></div>
+                </div>
+
+                <!--<div id="submitbutton">
+                    <button type="submit">Upload Files</button>
+                </div>-->
+
+            <center>
+                <div id="progress"></div>
+
+                <div id="messages">
+                    <p></p>
+                </div>
+            </center>
+            <!--<label>Ajouter des images: </label><input type="file" id="files" multiple /><br/>
+
+            <output id="list"></output>-->
+            <!--<label>Ajouter des images: </label><input id="fileSelector" type="file" class="custom-file-input" onchange="traiteFichiers();" multiple>-->
+        </p>
+        <input id="send" type="button" value="Envoyer" onclick="addImagestoList()"/>
+        <!--<input type="button" onclick="geolocalise();pe="button" onclick=tton" onclick=tton" onclick=tton" onclick=e="Localise"/>-->
+
+        <!--<p id="msg"></p>
+        <p id="address"></p>-->
+
+        <input type="button" id="btn-geo" onclick="getLocation()" value="Localise"/>
+    </form>
+    <div id="listMsg"></div>
+</div>
+<div id="map_canvas"></div>
+</body>
+<script src="script/filedrag.js"> </script>
+<!--<script src="script/uploadfile.js"> </script>-->
+</html>
